@@ -1,0 +1,27 @@
+colorscheme monokai
+set relativenumber
+set number
+set cursorline
+set hlsearch
+set nofen
+
+set undodir=~/.vim/undodir
+set undofile
+set undolevels=1000 "maximum number of changes that can be undone
+set undoreload=10000 "maximum number lines to save for undo on a buffer reload
+
+" Enable spellchecking for latex
+autocmd FileType *.tex setlocal spell
+
+" Automatically wrap at 80 characters for latex
+autocmd BufRead,BufNewFile *.tex setlocal textwidth=80
+
+" move to beginning/end of line
+nnoremap B ^
+nnoremap E $
+
+" ctrl+q is escape
+nnoremap <C-q> <esc>
+
+nmap fa :cs find s <C-R>=expand("<cword>")<CR><CR>
+cs add $HOME/workspace/school/2015-16/Cpen331/os161/src/kern/cscope.out
